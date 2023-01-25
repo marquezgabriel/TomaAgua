@@ -40,23 +40,50 @@ struct ContentView: View {
                 LinearGradient(colors: [.blue, .cyan, .blue, ], startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 
-                Image(systemName: "drop.fill")
-                    .resizable()
-                    .font(.title.weight(.ultraLight))
-                    .scaledToFit()
-                    .foregroundStyle(
-                        .linearGradient(stops: [.init(color: .clear, location: 0), .init(color: .clear, location: 1 - goalProgress), .init(color: .white, location: 1 - goalProgress), .init(color: .white, location: 1)], startPoint: .top, endPoint: .bottom)
-                    )
-                    .overlay (
-                        Image(systemName: "drop")
-                            .resizable()
-                            .font(.title.weight(.ultraLight))
-                            .scaledToFit()
-                    )
+                VStack(spacing:0) {
+                    statusText
+                        .font(.largeTitle)
+                        .padding(.top)
+                        .onTapGesture {
+                            withAnimation{
+                                showingAdjustments.toggle()
+                            }
+                        }
+                    
+                    if showingAdjustments {
+                        VStack {
+                            Text("Adjust Goal")
+                                .font(.headline)
+                            
+                            Slider(value: $waterRequired, in: 500...4000)
+                                .tint(.white)
+                        }
+                        .padding()
+                        .transition(.scale(scale: 0, anchor: .top))
+                    }
+
+                    Image(systemName: "drop.fill")
+                        .resizable()
+                        .font(.title.weight(.ultraLight))
+                        .scaledToFit()
+                        .foregroundStyle(
+                            .linearGradient(stops: [.init(color: .clear, location: 0), .init(color: .clear, location: 1 - goalProgress), .init(color: .white, location: 1 - goalProgress), .init(color: .white, location: 1)], startPoint: .top,    endPoint: .bottom)
+                        )
+                        .overlay (
+                            Image(systemName: "drop")
+                                .resizable()
+                                .font(.title.weight(.ultraLight))
+                                .scaledToFit()
+                        )
+                        .padding()
+                    
+                    Toggle("Use Metric units", isOn: $useMetricUnits)
+                        .padding()
+                    
+                }
             }
             .foregroundColor(.white)
         }
-        //.padding()
     }
 }
 
