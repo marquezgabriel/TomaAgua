@@ -10,12 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            ZStack {
+                LinearGradient(colors: [.blue, .cyan, .blue, ], startPoint: .top, endPoint: .bottom)
+                    .ignoresSafeArea()
+                
+                Image(systemName: "drop")
+                    .resizable()
+                    .font(.title.weight(.ultraLight))
+                    .scaledToFit()
+            }
+            .foregroundColor(.white)
         }
-        .padding()
+        // .padding()
     }
 }
 
