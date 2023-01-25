@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    var goalProgress: Double { 0.5 }
+    @AppStorage("waterConsumed") private var waterConsumed = 0.0
+    @AppStorage("waterRequired") private var waterRequired = 2000.0
+    @AppStorage("useMetricUnits") private var useMetricUnits = true
+
+    @AppStorage("lastDrink") private var lastDrink = Date.now.timeIntervalSinceReferenceDate
+
+    @State private var showingAdjustments = false
+    @State private var showingDrinksMenu = false
+
+    let mlToOz = 0.0351951
+    let ozToMl = 29.5735
     
+    var goalProgress: Double {
+        waterConsumed / waterRequired
+    }
+
+    var statusText: Text {
+        if useMetricUnits {
+            return Text("\(Int(waterConsumed))ml / \(Int(waterRequired))ml")
+        } else {
+            let adjustedConsumed = waterConsumed * mlToOz
+            let adjustedRequired = waterRequired * mlToOz
+            return Text("\(Int(adjustedConsumed))oz / \(Int(adjustedRequired))oz")
+        }
+    }
     
     var body: some View {
         VStack {
