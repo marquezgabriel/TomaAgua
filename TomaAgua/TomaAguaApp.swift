@@ -12,6 +12,7 @@ struct TomaAguaApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .defaultAppStorage(UserDefaults(suiteName: "group.com.marquezgabriel.tomaagua") ?? .standard)
         }
     }
 }

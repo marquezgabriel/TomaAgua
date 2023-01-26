@@ -11,7 +11,37 @@
 		EF2A6ADE29818F8C00975647 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2A6ADD29818F8C00975647 /* ContentView.swift */; };
 		EF2A6AE029818F8D00975647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2A6ADF29818F8D00975647 /* Assets.xcassets */; };
 		EF2A6AE329818F8D00975647 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2A6AE229818F8D00975647 /* Preview Assets.xcassets */; };
+		EF79E1B1298346B300E5A9F4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF79E1B0298346B300E5A9F4 /* WidgetKit.framework */; };
+		EF79E1B3298346B300E5A9F4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF79E1B2298346B300E5A9F4 /* SwiftUI.framework */; };
+		EF79E1B6298346B300E5A9F4 /* TomaAguaWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79E1B5298346B300E5A9F4 /* TomaAguaWidgetBundle.swift */; };
+		EF79E1B8298346B300E5A9F4 /* TomaAguaWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79E1B7298346B300E5A9F4 /* TomaAguaWidget.swift */; };
+		EF79E1BA298346B400E5A9F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF79E1B9298346B400E5A9F4 /* Assets.xcassets */; };
+		EF79E1BE298346B400E5A9F4 /* TomaAguaWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EF79E1AE298346B300E5A9F4 /* TomaAguaWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF79E1BC298346B400E5A9F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF2A6AD029818F8C00975647 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF79E1AD298346B300E5A9F4;
+			remoteInfo = TomaAguaWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF79E1BF298346B400E5A9F4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EF79E1BE298346B400E5A9F4 /* TomaAguaWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EF2A6AD829818F8C00975647 /* TomaAgua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomaAgua.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +49,15 @@
 		EF2A6ADD29818F8C00975647 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EF2A6ADF29818F8D00975647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF2A6AE229818F8D00975647 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF79E1AE298346B300E5A9F4 /* TomaAguaWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TomaAguaWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF79E1B0298346B300E5A9F4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		EF79E1B2298346B300E5A9F4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		EF79E1B5298346B300E5A9F4 /* TomaAguaWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomaAguaWidgetBundle.swift; sourceTree = "<group>"; };
+		EF79E1B7298346B300E5A9F4 /* TomaAguaWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomaAguaWidget.swift; sourceTree = "<group>"; };
+		EF79E1B9298346B400E5A9F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF79E1BB298346B400E5A9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF79E1C32983485900E5A9F4 /* TomaAgua.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TomaAgua.entitlements; sourceTree = "<group>"; };
+		EF79E1C42983489800E5A9F4 /* TomaAguaWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TomaAguaWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,13 +68,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF79E1AB298346B300E5A9F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF79E1B3298346B300E5A9F4 /* SwiftUI.framework in Frameworks */,
+				EF79E1B1298346B300E5A9F4 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		EF2A6ACF29818F8C00975647 = {
 			isa = PBXGroup;
 			children = (
+				EF79E1C42983489800E5A9F4 /* TomaAguaWidgetExtension.entitlements */,
 				EF2A6ADA29818F8C00975647 /* TomaAgua */,
+				EF79E1B4298346B300E5A9F4 /* TomaAguaWidget */,
+				EF79E1AF298346B300E5A9F4 /* Frameworks */,
 				EF2A6AD929818F8C00975647 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				EF2A6AD829818F8C00975647 /* TomaAgua.app */,
+				EF79E1AE298346B300E5A9F4 /* TomaAguaWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +103,7 @@
 		EF2A6ADA29818F8C00975647 /* TomaAgua */ = {
 			isa = PBXGroup;
 			children = (
+				EF79E1C32983485900E5A9F4 /* TomaAgua.entitlements */,
 				EF2A6ADB29818F8C00975647 /* TomaAguaApp.swift */,
 				EF2A6ADD29818F8C00975647 /* ContentView.swift */,
 				EF2A6ADF29818F8D00975647 /* Assets.xcassets */,
@@ -67,6 +120,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EF79E1AF298346B300E5A9F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF79E1B0298346B300E5A9F4 /* WidgetKit.framework */,
+				EF79E1B2298346B300E5A9F4 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF79E1B4298346B300E5A9F4 /* TomaAguaWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EF79E1B5298346B300E5A9F4 /* TomaAguaWidgetBundle.swift */,
+				EF79E1B7298346B300E5A9F4 /* TomaAguaWidget.swift */,
+				EF79E1B9298346B400E5A9F4 /* Assets.xcassets */,
+				EF79E1BB298346B400E5A9F4 /* Info.plist */,
+			);
+			path = TomaAguaWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +150,34 @@
 				EF2A6AD429818F8C00975647 /* Sources */,
 				EF2A6AD529818F8C00975647 /* Frameworks */,
 				EF2A6AD629818F8C00975647 /* Resources */,
+				EF79E1BF298346B400E5A9F4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EF79E1BD298346B400E5A9F4 /* PBXTargetDependency */,
 			);
 			name = TomaAgua;
 			productName = TomaAgua;
 			productReference = EF2A6AD829818F8C00975647 /* TomaAgua.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EF79E1AD298346B300E5A9F4 /* TomaAguaWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF79E1C2298346B400E5A9F4 /* Build configuration list for PBXNativeTarget "TomaAguaWidgetExtension" */;
+			buildPhases = (
+				EF79E1AA298346B300E5A9F4 /* Sources */,
+				EF79E1AB298346B300E5A9F4 /* Frameworks */,
+				EF79E1AC298346B300E5A9F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TomaAguaWidgetExtension;
+			productName = TomaAguaWidgetExtension;
+			productReference = EF79E1AE298346B300E5A9F4 /* TomaAguaWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +190,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					EF2A6AD729818F8C00975647 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EF79E1AD298346B300E5A9F4 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -116,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				EF2A6AD729818F8C00975647 /* TomaAgua */,
+				EF79E1AD298346B300E5A9F4 /* TomaAguaWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +223,14 @@
 			files = (
 				EF2A6AE329818F8D00975647 /* Preview Assets.xcassets in Resources */,
 				EF2A6AE029818F8D00975647 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF79E1AC298346B300E5A9F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF79E1BA298346B400E5A9F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +246,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF79E1AA298346B300E5A9F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF79E1B8298346B300E5A9F4 /* TomaAguaWidget.swift in Sources */,
+				EF79E1B6298346B300E5A9F4 /* TomaAguaWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF79E1BD298346B400E5A9F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF79E1AD298346B300E5A9F4 /* TomaAguaWidgetExtension */;
+			targetProxy = EF79E1BC298346B400E5A9F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EF2A6AE429818F8D00975647 /* Debug */ = {
@@ -262,8 +383,10 @@
 		EF2A6AE729818F8D00975647 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TomaAgua/TomaAgua.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TomaAgua/Preview Content\"";
@@ -292,8 +415,10 @@
 		EF2A6AE829818F8D00975647 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TomaAgua/TomaAgua.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TomaAgua/Preview Content\"";
@@ -319,6 +444,62 @@
 			};
 			name = Release;
 		};
+		EF79E1C0298346B400E5A9F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TomaAguaWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZVH6XSDGG7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TomaAguaWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TomaAguaWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marquezgabriel.tomaagua.TomaAgua.TomaAguaWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF79E1C1298346B400E5A9F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TomaAguaWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZVH6XSDGG7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TomaAguaWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TomaAguaWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marquezgabriel.tomaagua.TomaAgua.TomaAguaWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +517,15 @@
 			buildConfigurations = (
 				EF2A6AE729818F8D00975647 /* Debug */,
 				EF2A6AE829818F8D00975647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF79E1C2298346B400E5A9F4 /* Build configuration list for PBXNativeTarget "TomaAguaWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF79E1C0298346B400E5A9F4 /* Debug */,
+				EF79E1C1298346B400E5A9F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
