@@ -76,15 +76,38 @@ struct ContentView: View {
                                 .scaledToFit()
                         )
                         .padding()
+                        .onTapGesture {
+                            showingDrinksMenu.toggle()
+                            
+                        }
                     
                     Toggle("Use Metric units", isOn: $useMetricUnits)
                         .padding()
                     
                 }
             }
-            .foregroundColor(.white)
+        }
+        .foregroundColor(.white)
+        .alert("Add Drink", isPresented: $showingDrinksMenu) {
+            if useMetricUnits {
+                ForEach([100, 200, 300, 400, 500], id: \.self) { number in
+                    Button("\(number)ml") { add(Double(number)) }
+                }
+            } else {
+                ForEach([8, 12, 16, 20, 24, 28], id: \.self) { number in
+                    Button("\(number)oz") { add(Double(number) * ozToMl) }
+                }
+            }
+            
+            Button("Cancel", role: .cancel) {  }
+            
         }
     }
+    
+    func add(_ amount : Double) {
+        waterConsumed += amount
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
