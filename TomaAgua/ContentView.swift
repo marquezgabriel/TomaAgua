@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
     @AppStorage("waterConsumed") private var waterConsumed = 0.0
@@ -103,6 +104,12 @@ struct ContentView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification), perform: checkForReset)
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.significantTimeChangeNotification), perform: checkForReset)
+        .onChange(of: waterConsumed) { _ in
+            WidgetCenter.shared.reloadAllTimelines()
+        }
+        .onChange(of: waterRequired) { _ in
+            WidgetCenter.shared.reloadAllTimelines()
+        }
     }
     
     func add(_ amount : Double) {

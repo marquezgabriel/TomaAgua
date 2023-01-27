@@ -79,7 +79,6 @@ struct TomaAguaWidgetEntryView : View {
                             .scaledToFit()
                     )
                     .padding()
-                
         }
         .foregroundColor(.white)
     }
